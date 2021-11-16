@@ -1,0 +1,19 @@
+Universe = docker
+docker_image=josanabr/pandas
+
+transfer_input_files = script.sh
+
+executable = /bin/sh
+arguments = script.sh
+log = Pandas_log.txt
+output = Pandas_out.txt
+error  = Pandas_err.txt
+
+should_transfer_files = Yes
+when_to_transfer_output = ON_EXIT_OR_EVICT
+
+#input  = script.sh
+#request_cpus   = 1
+#request_memory = 4G
+
+queue 1
